@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Trust Move Courier & Cargo</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+        /* =========================================================
+           TRUST MOVE - PROFESSIONAL ADMIN LOGIN
+           ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #102a43;
+            --navy-dark: #071b2e;
+            --orange: #ff6b00;
+            --orange-dark: #e85d00;
+            --white: #ffffff;
+            --light: #f5f7fa;
+            --text: #243b53;
+            --muted: #829ab1;
+            --border: #d9e2ec;
+            --danger: #e53e3e;
+            --success: #16825d;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(255, 107, 0, 0.18),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(16, 42, 67, 0.35),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #071b2e 0%,
+                    #102a43 50%,
+                    #163d5c 100%
+                );
+
+            color: var(--text);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            overflow-x: hidden;
+        }
+
+        /* Decorative background */
+
+        body::before {
+            content: "";
+            position: fixed;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            top: -250px;
+            left: -200px;
+
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+
+            width: 600px;
+            height: 600px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.06);
+
+            bottom: -350px;
+            right: -250px;
+
+            pointer-events: none;
+        }
+
+
+        /* =========================================================
+           MAIN CONTAINER
+           ========================================================= */
+
+        .login-wrapper {
+            width: 100%;
+            max-width: 1050px;
+
+            min-height: 650px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            background: var(--white);
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.30);
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+
+        /* =========================================================
+           LEFT BRANDING PANEL
+           ========================================================= */
+
+        .brand-panel {
+            position: relative;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(7, 27, 46, 0.97),
+                    rgba(16, 42, 67, 0.95)
+                );
+
+            color: white;
+
+            padding: 55px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            overflow: hidden;
+        }
+
+        .brand-panel::before {
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 107, 0, 0.12);
+
+            top: -200px;
+            right: -200px;
+        }
+
+        .brand-panel::after {
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            bottom: -180px;
+            left: -160px;
+        }
+
+
+        /* Logo */
+
+        .brand-logo {
+            position: relative;
+            z-index: 2;
+
+            display: flex;
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 58px;
+            height: 58px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--orange),
+                    #ff8c32
+                );
+
+            border-radius: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 27px;
+
+            box-shadow:
+                0 10px 25px rgba(255,107,0,0.25);
+        }
+
+        .logo-text h1 {
+            font-size: 22px;
+            letter-spacing: 1.5px;
+
+            font-weight: 800;
+        }
+
+        .logo-text span {
+            display: block;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            color: #bcccdc;
+
+            margin-top: 4px;
+        }
+
+
+        /* Welcome */
+
+        .brand-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-content .tag {
+            display: inline-flex;
+
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 13px;
+
+            background: rgba(255,255,255,0.08);
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            border-radius: 30px;
+
+            color: #d9e2ec;
+
+            font-size: 12px;
+
+            margin-bottom: 20px;
+        }
+
+        .brand-content h2 {
+            font-size: 42px;
+
+            line-height: 1.15;
+
+            margin-bottom: 20px;
+
+            font-weight: 800;
+        }
+
+        .brand-content h2 span {
+            color: var(--orange);
+        }
+
+        .brand-content p {
+            color: #bcccdc;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
+            max-width: 400px;
+        }
+
+
+        /* Features */
+
+        .brand-features {
+            position: relative;
+            z-index: 2;
+
+            display: grid;
+
+            gap: 14px;
+        }
+
+        .brand-feature {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #d9e2ec;
+
+            font-size: 13px;
+        }
+
+        .brand-feature i {
+            color: var(--orange);
+
+            width: 30px;
+            height: 30px;
+
+            border-radius: 9px;
+
+            background: rgba(255,107,0,0.12);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* =========================================================
+           RIGHT LOGIN PANEL
+           ========================================================= */
+
+        .login-panel {
+            padding: 55px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            background: #ffffff;
+        }
+
+        .login-header {
+            margin-bottom: 35px;
+        }
+
+        .login-header .small-title {
+            color: var(--orange);
+
+            text-transform: uppercase;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+            margin-bottom: 9px;
+        }
+
+        .login-header h2 {
+            font-size: 31px;
+
+            color: var(--navy);
+
+            margin-bottom: 9px;
+        }
+
+        .login-header p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* Form */
+
+        .form-group {
+            margin-bottom: 21px;
+        }
+
+        .form-group label {
+            display: block;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: var(--navy);
+
+            margin-bottom: 9px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper > i {
+            position: absolute;
+
+            left: 16px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+            pointer-events: none;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+
+            height: 54px;
+
+            padding: 0 48px 0 46px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 11px;
+
+            outline: none;
+
+            font-size: 14px;
+
+            color: var(--text);
+
+            background: #f8fafc;
+
+            transition: all 0.25s ease;
+        }
+
+        .input-wrapper input::placeholder {
+            color: #9fb3c8;
+        }
+
+        .input-wrapper input:focus {
+            background: white;
+
+            border-color: var(--orange);
+
+            box-shadow:
+                0 0 0 4px rgba(255,107,0,0.10);
+        }
+
+
+        /* Password eye */
+
+        .password-toggle {
+            position: absolute;
+
+            right: 15px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            border: none;
+
+            background: transparent;
+
+            color: var(--muted);
+
+            cursor: pointer;
+
+            font-size: 15px;
+
+            padding: 5px;
+        }
+
+        .password-toggle:hover {
+            color: var(--orange);
+        }
+
+
+        /* Login button */
+
+        .login-button {
+            width: 100%;
+
+            height: 54px;
+
+            border: none;
+
+            border-radius: 11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--orange),
+                    #ff8126
+                );
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            box-shadow:
+                0 10px 22px rgba(255,107,0,0.20);
+
+            transition: all 0.25s ease;
+        }
+
+        .login-button:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 28px rgba(255,107,0,0.28);
+        }
+
+        .login-button:active {
+            transform: translateY(0);
+        }
+
+        .login-button:disabled {
+            opacity: 0.7;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        /* Message */
+
+        .login-message {
+            margin-top: 18px;
+
+            padding: 12px 14px;
+
+            border-radius: 10px;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+            display: none;
+        }
+
+        .login-message.show {
+            display: block;
+        }
+
+        .login-message.error {
+            background: #fff5f5;
+
+            border: 1px solid #fed7d7;
+
+            color: var(--danger);
+        }
+
+        .login-message.success {
+            background: #f0fff4;
+
+            border: 1px solid #c6f6d5;
+
+            color: var(--success);
+        }
+
+
+        /* Security notice */
+
+        .security-notice {
+            margin-top: 25px;
+
+            padding: 13px 15px;
+
+            background: #f5f7fa;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            gap: 10px;
+
+            align-items: flex-start;
+        }
+
+        .security-notice i {
+            color: var(--success);
+
+            margin-top: 2px;
+        }
+
+        .security-notice p {
+            font-size: 11px;
+
+            color: #627d98;
+
+            line-height: 1.5;
+        }
+
+
+        /* Back */
+
+        .back-link {
+            text-align: center;
+
+            margin-top: 25px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.2s;
+        }
+
+        .back-link a:hover {
+            color: var(--orange);
+        }
+
+        .back-link i {
+            margin-right: 6px;
+        }
+
+
+        /* Footer */
+
+        .login-footer {
+            text-align: center;
+
+            margin-top: 28px;
+
+            font-size: 11px;
+
+            color: #9fb3c8;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 850px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .login-wrapper {
+                grid-template-columns: 1fr;
+
+                max-width: 520px;
+
+                min-height: auto;
+            }
+
+            .brand-panel {
+                padding: 35px;
+
+                min-height: 330px;
+            }
+
+            .brand-content {
+                margin-top: 40px;
+            }
+
+            .brand-content h2 {
+                font-size: 31px;
+            }
+
+            .brand-features {
+                display: none;
+            }
+
+            .login-panel {
+                padding: 38px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .brand-panel {
+                padding: 28px;
+            }
+
+            .login-panel {
+                padding: 30px 22px;
+            }
+
+            .brand-content h2 {
+                font-size: 27px;
+            }
+
+            .login-header h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         MAIN LOGIN WRAPPER
+         ========================================================= -->
+
+    <div class="login-wrapper">
+
+        <!-- =====================================================
+             BRAND PANEL
+             ===================================================== -->
+
+        <section class="brand-panel">
+
+            <div class="brand-logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <div class="logo-text">
+                    <h1>TRUST MOVE</h1>
+                    <span>COURIER & CARGO</span>
+                </div>
+
+            </div>
+
+
+            <div class="brand-content">
+
+                <div class="tag">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Secure Administration
+                </div>
+
+                <h2>
+                    Manage your
+                    <span>global logistics</span>
+                    with confidence.
+                </h2>
+
+                <p>
+                    Access the Trust Move management portal to monitor
+                    shipments, update tracking information, manage quote
+                    requests and respond to customer enquiries.
+                </p>
+
+            </div>
+
+
+            <div class="brand-features">
+
+                <div class="brand-feature">
+                    <i class="fa-solid fa-box"></i>
+                    <span>Manage shipments & tracking</span>
+                </div>
+
+                <div class="brand-feature">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span>Review customer quote requests</span>
+                </div>
+
+                <div class="brand-feature">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>Manage customer messages</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOGIN PANEL
+             ===================================================== -->
+
+        <section class="login-panel">
+
+            <div class="login-header">
+
+                <div class="small-title">
+                    Trust Move Management
+                </div>
+
+                <h2>Welcome back</h2>
+
+                <p>
+                    Sign in to access your administrator dashboard.
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN FORM -->
+
+            <form id="adminLoginForm">
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="adminEmail">
+                        Email Address
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="adminEmail"
+                            placeholder="admin@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="adminPassword">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                            aria-label="Show password"
+                        >
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="adminLoginBtn"
+                >
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                    <span>Sign In to Dashboard</span>
+                </button>
+
+
+                <!-- LOGIN MESSAGE -->
+
+                <div
+                    id="adminLoginMessage"
+                    class="login-message"
+                ></div>
+
+
+            </form>
+
+
+            <!-- SECURITY -->
+
+            <div class="security-notice">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <p>
+                    Your administrator authentication is securely
+                    handled by Supabase. Never share your administrator
+                    password or secret API keys.
+                </p>
+
+            </div>
+
+
+            <!-- BACK TO WEBSITE -->
+
+            <div class="back-link">
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to Trust Move Website
+
+                </a>
+
+            </div>
+
+
+            <div class="login-footer">
+
+                © 2026 Trust Move Courier & Cargo.
+                Administrator access only.
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =========================================================
+         SUPABASE JAVASCRIPT LIBRARY
+         ========================================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+    <script>
+
+        /* ========================================================
+           SUPABASE CONFIGURATION
+           ======================================================== */
+
+        const SUPABASE_URL =
+            "https://pvicjdjvobhtzchnzejz.supabase.co";
+
+
+        /*
+         * IMPORTANT:
+         *
+         * Replace the text below with the SAME
+         * Publishable/Anon key you already used
+         * for your Trust Move website.
+         *
+         * DO NOT use your service_role/secret key.
+         */
+
+        const SUPABASE_ANON_KEY =
+            "sb_publishable_abuT9G4-LWi7a-v4KK7EsA_onbBFkw2";
+
+
+        /*
+         * IMPORTANT:
+         *
+         * We call this variable "supabaseClient"
+         * instead of "supabase".
+         *
+         * This prevents the error:
+         *
+         * Identifier 'supabase' has already been declared
+         */
+
+        const supabaseClient =
+            window.supabase.createClient(
+                SUPABASE_URL,
+                SUPABASE_ANON_KEY
+            );
+
+
+        /* ========================================================
+           HTML ELEMENTS
+           ======================================================== */
+
+        const loginForm =
+            document.getElementById("adminLoginForm");
+
+        const loginButton =
+            document.getElementById("adminLoginBtn");
+
+        const loginMessage =
+            document.getElementById("adminLoginMessage");
+
+        const passwordInput =
+            document.getElementById("adminPassword");
+
+        const passwordToggle =
+            document.getElementById("passwordToggle");
+
+
+        /* ========================================================
+           SHOW / HIDE PASSWORD
+           ======================================================== */
+
+        passwordToggle.addEventListener("click", () => {
+
+            const isPassword =
+                passwordInput.type === "password";
+
+
+            passwordInput.type =
+                isPassword ? "text" : "password";
+
+
+            passwordToggle.innerHTML =
+                isPassword
+                    ? '<i class="fa-solid fa-eye-slash"></i>'
+                    : '<i class="fa-solid fa-eye"></i>';
+
+
+            passwordToggle.setAttribute(
+                "aria-label",
+                isPassword
+                    ? "Hide password"
+                    : "Show password"
+            );
+
+        });
+
+
+        /* ========================================================
+           DISPLAY MESSAGE
+           ======================================================== */
+
+        function showMessage(message, type) {
+
+            loginMessage.textContent = message;
+
+            loginMessage.className =
+                "login-message show " + type;
+
+        }
+
+
+        function hideMessage() {
+
+            loginMessage.textContent = "";
+
+            loginMessage.className =
+                "login-message";
+
+        }
+
+
+        /* ========================================================
+           ADMIN LOGIN
+           ======================================================== */
+
+        loginForm.addEventListener(
+            "submit",
+            async (event) => {
+
+                event.preventDefault();
+
+
+                const email =
+                    document
+                        .getElementById("adminEmail")
+                        .value
+                        .trim();
+
+
+                const password =
+                    passwordInput.value;
+
+
+                if (!email || !password) {
+
+                    showMessage(
+                        "Please enter your email and password.",
+                        "error"
+                    );
+
+                    return;
+                }
+
+
+                /* Disable button */
+
+                loginButton.disabled = true;
+
+
+                loginButton.innerHTML =
+                    `
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <span>Signing in...</span>
+                    `;
+
+
+                hideMessage();
+
+
+                try {
+
+                    /* =========================================
+                       SUPABASE AUTHENTICATION
+                       ========================================= */
+
+                    const {
+                        data,
+                        error
+                    } =
+                        await supabaseClient.auth
+                            .signInWithPassword({
+                                email: email,
+                                password: password
+                            });
+
+
+                    /* Check Supabase error */
+
+                    if (error) {
+
+                        throw error;
+
+                    }
+
+
+                    /* Make sure user exists */
+
+                    if (!data || !data.user || !data.session) {
+
+                        throw new Error(
+                            "Sign-in did not create a session. Confirm the admin email, then try again."
+                        );
+
+                    }
+
+
+                    console.log(
+                        "Trust Move Admin Login Successful:",
+                        data.user.email
+                    );
+
+
+                    /* Success message */
+
+                    showMessage(
+                        "Login successful! Opening your dashboard...",
+                        "success"
+                    );
+
+
+                    /* Change button */
+
+                    loginButton.innerHTML =
+                        `
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Login Successful</span>
+                        `;
+
+
+                    /*
+                     * Open dashboard.
+                     *
+                     * We will create admin-dashboard.html
+                     * in the next stage.
+                     */
+
+                    window.location.assign(
+                        new URL(
+                            "admin-dashboard.html",
+                            window.location.href
+                        ).href
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Trust Move Admin Login Error:",
+                        error
+                    );
+
+
+                    let errorMessage =
+                        "Unable to sign in. Please try again.";
+
+
+                    /*
+                     * Give a more useful message
+                     * for common Supabase errors.
+                     */
+
+                    if (
+                        error.message &&
+                        error.message
+                            .toLowerCase()
+                            .includes("invalid login credentials")
+                    ) {
+
+                        errorMessage =
+                            "Incorrect email or password. Please check your Supabase admin account.";
+
+                    } else if (
+                        error.message
+                    ) {
+
+                        errorMessage =
+                            error.message;
+
+                    }
+
+
+                    showMessage(
+                        errorMessage,
+                        "error"
+                    );
+
+
+                    /* Restore button */
+
+                    loginButton.disabled = false;
+
+                    loginButton.innerHTML =
+                        `
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>Sign In to Dashboard</span>
+                        `;
+
+                }
+
+            }
+        );
+
+
+        /* ========================================================
+           ENTER KEY SUPPORT
+           ======================================================== */
+
+        passwordInput.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (event.key === "Enter") {
+
+                    loginForm.requestSubmit();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
