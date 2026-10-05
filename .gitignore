@@ -1,0 +1,7 @@
+# Dependencies and private environment settings
+backend/node_modules/
+backend/.env
+
+# Operating-system/editor files
+.DS_Store
+Thumbs.db
